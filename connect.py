@@ -1,5 +1,8 @@
+#using paramiko for ssh
 import paramiko
 p = paramiko.SSHClient()
+
+#reading server details from a csv file and connecting to the host to execute commands
 server_details = open("server_list.csv","r")
 for each in server_details.readlines():
         strip_each=each.strip()
